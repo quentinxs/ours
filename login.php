@@ -4,8 +4,8 @@ session_start();
 require_once 'db_connector.php';
 
 if ($connection) {
-    $attemptedLoginName = $_GET['login-name'];
-    $attemptedPassword = $_GET['login-password'];
+    $attemptedLoginName = $_POST['login-name'];
+    $attemptedPassword = $_POST['login-password'];
 
 
     $sql_statement = "SELECT * FROM `customer` WHERE `CUST_USERNAME` = '$attemptedLoginName' AND `CUST_PASSWORD` = '$attemptedPassword' LIMIT 1";
