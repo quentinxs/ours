@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>OURS</title>
-    <meta name="author" content="Nick">
-    <meta name="description" content="HTML Test File">
+    <meta name="author" content="Blake">
+    <meta name="description" content="OURS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main_style.css">
     <link rel="icon" type="image/x-icon" href="Picture1.png" /> </head>
@@ -46,11 +46,10 @@
             <h2>Quentin Sheets</h2>
             <h2>Blake Townson</h2>
             <h2>Nick Worthley</h2>
-            <h2>Lamianooz Zinia</h2>
-            <h2>CSI 3370</h2> </div>
+            <h2>Lamianooz Zinia</h2> </div>
     </div>
     <div class="footer">
-        <h5>Group names, class, date </h5> </div>
+        <h5>CSI 3370</h5> </div>
 </body>
 
 </html>

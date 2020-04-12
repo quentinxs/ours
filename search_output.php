@@ -3,52 +3,50 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Database Project</title>
-    <meta name="author" content="Nick">
-    <meta name="description" content="HTML Test File">
+    <title>OURS</title>
+    <meta name="author" content="Blake">
+    <meta name="description" content="OURS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main_style.css">
-</head>
+    <link rel="stylesheet" href="main_style.css"> </head>
 
 <body>
     <header></header>
     <main></main>
     <footer></footer>
     <script type="text/javascript" src=""></script>
-
     <div class="header">
-        <h2>Event Manager</h2>
-    </div>
-
-    <div class="navbar">
-        <a href="index.php" class="active">Home</a>
+        <h2>Event Manager</h2> </div>
+    <div class="navbar"> <a href="index.php" class="active">Home</a>
         <?php session_start();
         if(isset($_SESSION['username']))
         echo '<a href="profile.php" class="right">Profile</a>'; ?>
-        <?php
+            <?php
         if(isset($_SESSION['username'])) {
           echo '<a href="logout.php" class="right">Sign Out</a>'; }
-      else { echo '<a href="signin.php" class="right">Sign In</a>'; } ?>
-        <a href="search.php" class="right">Search</a>
-    </div>
-
+      else { echo '<a href="signin.php" class="right">Sign In</a>'; } ?> <a href="search.php" class="right">Search</a> </div>
     <div class="row">
         <div class="side">
             <h2>Profile</h2>
-            <div class="profilenav">
-                <a href="profile.php">Info</a>
-                <a href="profilereg.php">Registered</a>
-            </div>
+            <div class="profilenav"> <a href="profile.php">Info</a> <a href="profilereg.php">Registered</a> </div>
         </div>
         <div class="main">
             <h2>Search</h2>
             <div id="concert-table-listing">
-             <table id="concert-table">
-             <tr>
-              <th>Concert Name</th> <th> Date </th> <th> Venue </th> <th>Section</th> <th> Reserve Tickets </th>
-             </tr>
-            <?php
-            $conn = mysqli_connect("localhost", "root", "", "databaseproject");
+                <table id="concert-table">
+                    <tr>
+                        <th></th>
+                        <th> Date </th>
+                        <th> Venue </th>
+                        <th>Section</th>
+                        <th> Reserve Tickets </th>
+                    </tr>
+                    <?php
+        $username = "betownson";
+        $password = "WChG3zEdQP5ntscb";
+        $hostname = "localhost";
+        $dbname = "betownson";
+
+            $conn = mysqli_connect($hostname, $username, $password, $dbname);
              // Check connection
              if ($conn->connect_error) {
               die("Connection failed: " . $conn->connect_error);
@@ -57,7 +55,12 @@
              $searchcname = $_GET['eventName'];
              $searchccity = $_GET['city'];
              $searchcdate = $_GET['event'];
-             $sql = "SELECT concert.CONCERT_NAME, concert.CONCERT_DATE, seats.SEATS_SECTION, concert.CONCERT_ID, venue.VEN_NAME, venue.VEN_ID FROM concert, venue, seats WHERE  concert.VEN_ID=venue.VEN_ID AND concert.SEATS_ID = seats.SEATS_ID AND (concert.CONCERT_NAME = '$searchcname' OR concert.CONCERT_DATE ='$searchcdate' OR venue.VEN_CITY = '$searchccity');";
+            $sql = "SELECT `concert`.`CONCERT_ID`,`concert`.`CONCERT_NAME`, `concert`.`CONCERT_DATE`, `concert`.`CONCERT_TIME`, `venue`.`VEN_NAME` 
+            FROM `concert`
+            INNER JOIN `venue`
+            ON `concert`.`VEN_ID` = `venue`.`VEN_ID`
+            WHERE 1 OR (concert.CONCERT_NAME = '$searchcname' OR concert.CONCERT_DATE ='$searchcdate');";
+
              $result = $conn->query($sql);
              $counter = 1;
              if ($result->num_rows > 0) {
@@ -67,28 +70,20 @@
                 echo "<td id='date_of_event'>" . $row['CONCERT_DATE'];
                 echo "<td id='venue'>" . $row['VEN_NAME'];
                 echo "<td id='section'>" . $row['SEATS_SECTION'];
-                echo "<td><a href='addevent.php?id=".$row['CONCERT_ID']."&vid=".$row['VEN_ID']."'>Add</a></td>";
+               // echo "<td><a href='addevent.php?id=".$row['CONCERT_ID']."&vid=".$row['VEN_ID']."'>Add</a></td>";
+                 echo "<td id='concert'><a href='addevent.php?id=".$row['CONCERT_ID']."'>Add</a></td>";
             }
+                 
             echo '</table>';
             } else { echo '0 results'; }
             $conn->close();
             ?>
-
-            </table>
+                </table>
             </div>
         </div>
     </div>
-
     <div class="footer">
-        <h6>Anthony Robin, Chris Kenneth Viray, Nick Worhtley</h6>
-        <h6>CSI 3450</h6>
-        <h6>December 3, 2019</h6>
-    </div>
-
-
-
-
-
+        <h5>CSI 3370</h5> </div>
 </body>
 
 </html>

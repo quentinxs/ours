@@ -1,10 +1,9 @@
 <?php
 
-    $username = "root";
-    $password = "";
-    $hostname = "localhost";
-    $dbname = "databaseproject";
-
+    $username = "betownson";
+	$password = "WChG3zEdQP5ntscb";
+	$hostname = "localhost";
+	$dbname = "betownson";
     $selected = mysqli_connect($hostname, $username, $password, $dbname);
 
 

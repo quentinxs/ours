@@ -3,9 +3,9 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>HTML Test File</title>
-	<meta name="author" content="Nick">
-	<meta name="description" content="HTML Test File">
+	<title>OURS</title>
+	<meta name="author" content="Blake">
+	<meta name="description" content="OURS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="account_style.css">
 	<link rel="icon" type="image/x-icon" href="Picture1.png"/>
@@ -18,7 +18,7 @@
 	<script type="text/javascript" src=""></script>
 
 <div class="header">
-  <h2>Event Manager</h2>
+  <h2>OURS</h2>
 </div>
 
 <div class="navbar">
@@ -50,7 +50,7 @@
 </div>
 
 <div class="footer">
-    <h5>Group names, class, date </h5></div>
+    <h5>CSI 3370</h5></div>
 
 
 

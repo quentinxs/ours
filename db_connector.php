@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
  $username = "betownson";
-	$password = "";
+	$password = "WChG3zEdQP5ntscb";
 	$hostname = "localhost";
 	$dbname = "betownson";
 
