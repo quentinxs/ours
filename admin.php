@@ -27,17 +27,17 @@
             <div class="profilenav"> <a href="profile.php">Info</a> <a href="profilereg.php">Registered</a> </div>
         </div>
         <div class="main">
-            <h2>Update Concert Information</h2>
-            <form action="adminOutput.php"> Concert Name:
+            <h2>Update Event Information</h2>
+            <form action="adminOutput.php"> Event Name:
                 <input type="text" name="concertname">
                 <br>
-                <br> Concert Date:
+                <br> Event Date:
                 <input type="date" name="concertdate">
                 <br>
-                <br> Concert Time:
+                <br> Event Time:
                 <input type="time" name="concerttime">
                 <br>
-                <br> Concert Type:
+                <br> Event Type:
                 <input type="text" name="concerttype">
                 <br>
                 <br> Venue Id:
@@ -53,7 +53,7 @@
                 <button type="submit" class="search-or-add-button"> Update </button>
             </form>
             <br>
-            <form action="adminDelete.php"> Concert Name:
+            <form action="adminDelete.php"> Event Name (Delete):
                 <input type="text" name="concertname">
                 <br>
                 <br>
