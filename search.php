@@ -46,7 +46,8 @@
             <br> </div>
     </div>
     <div class="footer">
-        <h5>CSI 3370</h5> </div>
+        <h5>CSI 3370</h5>
+    </div>
 </body>
 
 </html>
