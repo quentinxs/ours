@@ -80,9 +80,7 @@
     </div>
 
     <div class="footer">
-        <h6>Anthony Robin, Chris Kenneth Viray, Nick Worhtley</h6>
-        <h6>CSI 3450</h6>
-        <h6>December 3, 2019</h6>
+		<h5>Group names, class, date</h5>
     </div>
 
 
