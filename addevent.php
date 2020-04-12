@@ -1,11 +1,9 @@
-
-
-  <?php
+<?php
 
 
 
   $username = "betownson";
-	$password = "";
+	$password = "WChG3zEdQP5ntscb";
 	$hostname = "localhost";
 	$dbname = "betownson";
 
@@ -19,7 +17,7 @@ session_start();
 //  $query = "INSERT INTO customer (CUST_USERNAME, CUST_PASSWORD, CUST_EMAIL) VALUES ('$user', '$pass', '$email')";
   //$result = mysqli_query($selected, $query);
 
-  $query = "INSERT INTO booking (CUST_ID, CONCERT_ID) VALUES ('$userid', '$concert_id')";
+  $query = "INSERT INTO `booking` (`CUST_ID`, `CONCERT_ID`) VALUES ('$userid', '$concert_id')";
   $result = mysqli_query($selected, $query);
   #$sql = "INSERT INTO booking (CUST_ID, CONCERT_ID) VALUES (?, ?)";
   #$stmt=$conn->prepare($sql);

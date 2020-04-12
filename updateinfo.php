@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HTML Test File</title>
-    <meta name="author" content="Nick">
-    <meta name="description" content="HTML Test File">
+    <title>OURS</title>
+    <meta name="author" content="Blake">
+    <meta name="description" content="OURS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="profile_style.css"> </head>
 
@@ -15,7 +15,7 @@
     <footer></footer>
     <script type="text/javascript" src=""></script>
     <div class="header">
-        <h2>Event Manager</h2> </div>
+        <h2>OURS</h2> </div>
     <div class="navbar"> <a href="index.php" class="active">Home</a> <a href="profile.php" class="right">Profile</a>
         <?php session_start();
         if(isset($_SESSION['username'])) {
